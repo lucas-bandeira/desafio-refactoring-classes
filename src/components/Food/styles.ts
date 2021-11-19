@@ -1,12 +1,16 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface IContainer{
+    available: boolean;
+}
+
+export const Container = styled.div<IContainer>`
   background: #f0f0f5;
   border-radius: 8px;
 
   header {
     background: #ffb84d;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0 0;
     height: 192px;
     overflow: hidden;
     transition: 0.3s opacity;
@@ -56,7 +60,7 @@ export const Container = styled.div`
 
     padding: 20px 30px;
     background: #e4e4eb;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 0 0 8px 8px;
 
     div.icon-container {
       display: flex;
